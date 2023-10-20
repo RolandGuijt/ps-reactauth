@@ -19,9 +19,13 @@ namespace Globomantics.Backend.Repositories
                 new Bid { Id = 11, HouseId = 5, BidderName = "Charlotte Max", Amount = 150000 },
                 new Bid { Id = 12, HouseId = 5, BidderName = "Marcus Scott", Amount = 170000 },
             };
-        public List<Bid> GetBids(int houseId)
+        public List<Bid> GetBids(int houseId) =>
+            bids.Where(b => b.HouseId == houseId).ToList();
+
+        public void Add(Bid bid)
         {
-            return bids.Where(b => b.HouseId == houseId).ToList();
+            bid.Id = bids.Max(b => b.Id) + 1;
+            bids.Add(bid);
         }
     }
 }

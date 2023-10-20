@@ -1,4 +1,5 @@
 using Globomantics.Backend.Repositories;
+using Globomantics.Backend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,19 +9,16 @@ builder.Services.AddSingleton<BidRepository>();
 
 var app = builder.Build();
 
-app.MapGet("/getallhouses", (HouseRepository repo) =>
+app.MapGet("/houses", (HouseRepository repo) => repo.GetAll());
+app.MapPost("/houses", (House house, HouseRepository repo) => 
 {
-    return repo.GetAll();
-}).WithName("GetAllHouses");
+  repo.Add(house);
+  return Results.Created($"/houses/{house.Id}", house);
+});
 
-app.MapGet("/getbids/{id:int}", (int id, BidRepository repo) =>
-{
-    return repo.GetBids(id);
-}).WithName("GetBidByHouse");
+app.MapGet("/houses/{id:int}/bids", (int id, BidRepository repo) => repo.GetBids(id));
+app.MapPost("houses/{id:int}/bids", (Bid bid, BidRepository repo) => repo.Add(bid));
 
-if (app.Environment.IsDevelopment())
-    app.UseSpaYarp();
-    
+app.UseSpaYarp();    
 app.MapFallbackToFile("index.html");
-
 app.Run();

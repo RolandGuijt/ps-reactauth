@@ -2,7 +2,7 @@ const usePostHouse = () => {
   return {
     post: (house) => {
       const postHouse = async () => {
-        await fetch(`/api/houses`, {
+        await fetch(`/houses`, {
           method: "POST",
           headers: {
             Accept: "application/json",

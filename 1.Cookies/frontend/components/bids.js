@@ -37,7 +37,7 @@ const Bids = ({ house }) => {
             <tbody>
               {bids.map((b) => (
                 <tr key={b.id}>
-                  <td>{b.bidder}</td>
+                  <td>{b.bidderName}</td>
                   <td>{currencyFormatter.format(b.amount)}</td>
                 </tr>
               ))}

@@ -3,7 +3,7 @@ import useGetRequest from "./useGetRequest";
 
 const useBids = (houseId) => {
   const [bids, setBids] = useState([]);
-  const { get, loadingState } = useGetRequest(`/getbids/${houseId}`);
+  const { get, loadingState } = useGetRequest(`/houses/${houseId}/bids`);
 
   useEffect(() => {
     const fetchBids = async () => {
@@ -14,7 +14,7 @@ const useBids = (houseId) => {
   }, [get]);
 
   const postBid = async (bid) => {
-    await fetch(`/api/bids/${bid.houseId}`, {
+    await fetch(`/houses/${bid.houseId}/bids`, {
       method: "POST",
       headers: {
         Accept: "application/json",
