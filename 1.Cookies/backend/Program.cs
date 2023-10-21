@@ -6,6 +6,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSpaYarp();
 builder.Services.AddSingleton<HouseRepository>();
 builder.Services.AddSingleton<BidRepository>();
+builder.Services.AddSingleton<UserRepository>();
+
+builder.Services.AddAuthentication()
+    .AddCookie(o =>
+    {
+        o.Cookie.Name = "__Host-spa";
+        o.Cookie.SameSite = SameSiteMode.Strict;
+        o.Events.OnRedirectToLogin = (context) =>
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        };
+    });
 
 var app = builder.Build();
 

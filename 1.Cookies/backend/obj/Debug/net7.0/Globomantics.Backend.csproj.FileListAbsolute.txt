@@ -7,10 +7,6 @@ C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Glob
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Globomantics.Backend.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Globomantics.Backend.pdb
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\AspNetCore.SpaYarp.dll
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Microsoft.OpenApi.dll
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\System.IO.Hashing.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Yarp.ReverseProxy.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.csproj.AssemblyReference.cache
@@ -19,7 +15,6 @@ C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Glob
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.AssemblyInfoInputs.cache
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.AssemblyInfo.cs
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.csproj.CoreCompileInputs.cache
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\staticwebassets\msbuild.Globomantics.Backend.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\staticwebassets\msbuild.build.Globomantics.Backend.props
@@ -35,3 +30,6 @@ C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\refi
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.pdb
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.genruntimeconfig.cache
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\ref\Globomantics.Backend.dll
+C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.RazorAssemblyInfo.cache
+C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.RazorAssemblyInfo.cs
+C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
