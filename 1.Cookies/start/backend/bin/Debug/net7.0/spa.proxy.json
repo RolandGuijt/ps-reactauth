@@ -1,0 +1,9 @@
+{
+"SpaProxyServer": {
+"ClientUrl": "http://localhost:3000",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\1.Cookies\\start\\backend\\..\\frontend\\",
+"MaxTimeoutInSeconds": "120",
+"PublicPath": ""
+}
+}

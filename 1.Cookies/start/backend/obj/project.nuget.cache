@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "PKf5pbm5rQJyyeg+QxQAd6X4l6xkzDQ9pOFV+dMP92QbCoCNK2jzmD1EFSh4Q6OORD7ZXeuQfw4Mnw1MiGRIsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\1.Cookies\\start\\backend\\Globomantics.Backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rolan\\.nuget\\packages\\aspnetcore.spayarp\\2.0.1\\aspnetcore.spayarp.2.0.1.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.12\\microsoft.aspnetcore.authentication.google.7.0.12.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\system.io.hashing\\7.0.0\\system.io.hashing.7.0.0.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\yarp.reverseproxy\\2.0.1\\yarp.reverseproxy.2.0.1.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.12\\microsoft.netcore.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.12\\microsoft.windowsdesktop.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.12\\microsoft.aspnetcore.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.12\\microsoft.netcore.app.host.win-x64.7.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

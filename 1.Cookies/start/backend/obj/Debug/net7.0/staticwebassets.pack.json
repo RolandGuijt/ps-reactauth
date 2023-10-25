@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\1.Cookies\\start\\backend\\wwwroot\\img\\globomantics-logo-darkblue.png",
+      "PackagePath": "staticwebassets\\img\\globomantics-logo-darkblue.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Globomantics.Backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Globomantics.Backend.props",
+      "PackagePath": "build\\Globomantics.Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Globomantics.Backend.props",
+      "PackagePath": "buildMultiTargeting\\Globomantics.Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Globomantics.Backend.props",
+      "PackagePath": "buildTransitive\\Globomantics.Backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
