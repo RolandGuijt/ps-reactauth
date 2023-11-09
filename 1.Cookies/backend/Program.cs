@@ -40,6 +40,5 @@ app.MapPost("houses/{id:int}/bids", (Bid bid, BidRepository repo) =>
 app.MapControllers();
 
 app.UseSpaYarp();
-app.MapFallbackToFile("index.html");
 
 app.Run();

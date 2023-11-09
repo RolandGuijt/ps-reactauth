@@ -32,7 +32,6 @@ C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Glob
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\ref\Globomantics.Backend.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.RazorAssemblyInfo.cache
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\obj\Debug\net7.0\Globomantics.Backend.RazorAssemblyInfo.cs
-C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\backend\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\start\backend\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\start\backend\bin\Debug\net7.0\appsettings.json
 C:\Users\rolan\source\repos\ps-reactauth\1.Cookies\start\backend\bin\Debug\net7.0\spa.proxy.json

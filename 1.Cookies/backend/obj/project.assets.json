@@ -20,22 +20,6 @@
           "build/AspNetCore.SpaYarp.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.Google/7.0.12": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "System.IO.Hashing/7.0.0": {
         "type": "package",
         "compile": {
@@ -89,21 +73,6 @@
         "lib/net7.0/AspNetCore.SpaYarp.dll"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.Google/7.0.12": {
-      "sha512": "9rn7aZpSWLf6P2yUAXeY8KKwAkAyTVQDQJzGNXN6ESObEim0Qt7CKnhlBvtOdxmX2BJc5rEmCHmvUwPCX/JKEA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.authentication.google/7.0.12",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll",
-        "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.xml",
-        "microsoft.aspnetcore.authentication.google.7.0.12.nupkg.sha512",
-        "microsoft.aspnetcore.authentication.google.nuspec"
-      ]
-    },
     "System.IO.Hashing/7.0.0": {
       "sha512": "sDnWM0N3AMCa86LrKTWeF3BZLD2sgWyYUc7HL6z4+xyDZNQRwzmxbo4qP2rX2MqC+Sy1/gOSRDah5ltxY5jPxw==",
       "type": "package",
@@ -150,8 +119,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "AspNetCore.SpaYarp >= 2.0.1",
-      "Microsoft.AspNetCore.Authentication.Google >= 7.0.12"
+      "AspNetCore.SpaYarp >= 2.0.1"
     ]
   },
   "packageFolders": {
@@ -202,10 +170,6 @@
           "AspNetCore.SpaYarp": {
             "target": "Package",
             "version": "[2.0.1, )"
-          },
-          "Microsoft.AspNetCore.Authentication.Google": {
-            "target": "Package",
-            "version": "[7.0.12, )"
           }
         },
         "imports": [
