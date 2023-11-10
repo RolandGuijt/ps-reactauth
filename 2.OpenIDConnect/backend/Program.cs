@@ -9,7 +9,6 @@ builder.Services.AddSpaYarp();
 builder.Services.AddSingleton<HouseRepository>();
 builder.Services.AddSingleton<BidRepository>();
 
-builder.Services.AddControllersWithViews();
 builder.Services.AddBff(o => o.ManagementBasePath = "/account")
     .AddServerSideSessions();
 
@@ -56,9 +55,7 @@ app.MapPost("houses/{id:int}/bids", (Bid bid, BidRepository repo) =>
     return Results.Created($"/houses/{bid.HouseId}/bids", bid);
 });
 
-app.MapControllers();
 app.MapBffManagementEndpoints();
-
 app.UseSpaYarp();
 
 app.Run();

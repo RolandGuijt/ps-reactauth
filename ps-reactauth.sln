@@ -3,15 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Cookies", "1.Cookies", "{7FA6B49F-837E-483A-B373-094F20C1D172}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Cookies", "1.Cookies", "{7CE6BF5F-27C3-4218-8AB7-3E1F5BA85628}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "1.Cookies\backend\Globomantics.Backend.csproj", "{60A284E5-600E-4A24-9420-65B01ACFD335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "1.Cookies\backend\Globomantics.Backend.csproj", "{89C880B6-0975-4737-A6E7-30E3DA387843}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.OpenIDConnect", "2.OpenIDConnect", "{ADD7CA9C-C37C-4B00-9CB4-6B58D5A6A773}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.OpenIDConnect", "2.OpenIDConnect", "{E8AED26B-84FB-46E1-A013-DD35E6597860}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "2.OpenIDConnect\backend\Globomantics.Backend.csproj", "{B25D3552-FC70-4E27-A8C2-B78CA90EE53C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "2.OpenIDConnect\backend\Globomantics.Backend.csproj", "{06487EA3-03B2-4B88-91EF-8AD26735C707}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Idp", "2.OpenIDConnect\IdentityProvider\Globomantics.Idp.csproj", "{0EB87C53-C865-451F-BB4B-715891935597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Idp", "2.OpenIDConnect\IdentityProvider\Globomantics.Idp.csproj", "{6E635E67-2CBC-4686-8791-3937489875A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.OpenIDConnectExternalApi", "3.OpenIDConnectExternalApi", "{3E592350-04E9-4FF7-AB42-19ABF6673069}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Api", "3.OpenIDConnectExternalApi\api\Globomantics.Api.csproj", "{E9A18625-3BFE-4E74-88BE-42DA9B318F4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "3.OpenIDConnectExternalApi\backend\Globomantics.Backend.csproj", "{503257E6-BA05-4958-873D-C5EE22BCEA1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Idp", "3.OpenIDConnectExternalApi\IdentityProvider\Globomantics.Idp.csproj", "{F6702256-356B-48EE-B35E-5E9DD5152B40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,28 +27,43 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{60A284E5-600E-4A24-9420-65B01ACFD335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60A284E5-600E-4A24-9420-65B01ACFD335}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60A284E5-600E-4A24-9420-65B01ACFD335}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60A284E5-600E-4A24-9420-65B01ACFD335}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B25D3552-FC70-4E27-A8C2-B78CA90EE53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B25D3552-FC70-4E27-A8C2-B78CA90EE53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B25D3552-FC70-4E27-A8C2-B78CA90EE53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B25D3552-FC70-4E27-A8C2-B78CA90EE53C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EB87C53-C865-451F-BB4B-715891935597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EB87C53-C865-451F-BB4B-715891935597}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EB87C53-C865-451F-BB4B-715891935597}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EB87C53-C865-451F-BB4B-715891935597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C880B6-0975-4737-A6E7-30E3DA387843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C880B6-0975-4737-A6E7-30E3DA387843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C880B6-0975-4737-A6E7-30E3DA387843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C880B6-0975-4737-A6E7-30E3DA387843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06487EA3-03B2-4B88-91EF-8AD26735C707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06487EA3-03B2-4B88-91EF-8AD26735C707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06487EA3-03B2-4B88-91EF-8AD26735C707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06487EA3-03B2-4B88-91EF-8AD26735C707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E635E67-2CBC-4686-8791-3937489875A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E635E67-2CBC-4686-8791-3937489875A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E635E67-2CBC-4686-8791-3937489875A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E635E67-2CBC-4686-8791-3937489875A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A18625-3BFE-4E74-88BE-42DA9B318F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A18625-3BFE-4E74-88BE-42DA9B318F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A18625-3BFE-4E74-88BE-42DA9B318F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A18625-3BFE-4E74-88BE-42DA9B318F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{503257E6-BA05-4958-873D-C5EE22BCEA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{503257E6-BA05-4958-873D-C5EE22BCEA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{503257E6-BA05-4958-873D-C5EE22BCEA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{503257E6-BA05-4958-873D-C5EE22BCEA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6702256-356B-48EE-B35E-5E9DD5152B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6702256-356B-48EE-B35E-5E9DD5152B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6702256-356B-48EE-B35E-5E9DD5152B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6702256-356B-48EE-B35E-5E9DD5152B40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{60A284E5-600E-4A24-9420-65B01ACFD335} = {7FA6B49F-837E-483A-B373-094F20C1D172}
-		{B25D3552-FC70-4E27-A8C2-B78CA90EE53C} = {ADD7CA9C-C37C-4B00-9CB4-6B58D5A6A773}
-		{0EB87C53-C865-451F-BB4B-715891935597} = {ADD7CA9C-C37C-4B00-9CB4-6B58D5A6A773}
+		{89C880B6-0975-4737-A6E7-30E3DA387843} = {7CE6BF5F-27C3-4218-8AB7-3E1F5BA85628}
+		{06487EA3-03B2-4B88-91EF-8AD26735C707} = {E8AED26B-84FB-46E1-A013-DD35E6597860}
+		{6E635E67-2CBC-4686-8791-3937489875A4} = {E8AED26B-84FB-46E1-A013-DD35E6597860}
+		{E9A18625-3BFE-4E74-88BE-42DA9B318F4F} = {3E592350-04E9-4FF7-AB42-19ABF6673069}
+		{503257E6-BA05-4958-873D-C5EE22BCEA1F} = {3E592350-04E9-4FF7-AB42-19ABF6673069}
+		{F6702256-356B-48EE-B35E-5E9DD5152B40} = {3E592350-04E9-4FF7-AB42-19ABF6673069}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {98856395-3B54-4450-9184-78F40092C9D0}
+		SolutionGuid = {12648409-74A6-4DC2-9879-174DDD5BF6E0}
 	EndGlobalSection
 EndGlobal
