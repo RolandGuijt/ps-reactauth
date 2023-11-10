@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "Enu59wIzPrYMkQdj7LUUk20Y3pzHvys+36+0NyX+MxI=",
+  "Source": "Globomantics.Backend",
+  "BasePath": "_content/Globomantics.Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Globomantics.Backend\\wwwroot",
+      "Source": "Globomantics.Backend",
+      "ContentRoot": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\2.OpenIDConnect\\backend\\wwwroot\\",
+      "BasePath": "_content/Globomantics.Backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\2.OpenIDConnect\\backend\\wwwroot\\img\\globomantics-logo-darkblue.png",
+      "SourceId": "Globomantics.Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rolan\\source\\repos\\ps-reactauth\\2.OpenIDConnect\\backend\\wwwroot\\",
+      "BasePath": "_content/Globomantics.Backend",
+      "RelativePath": "img/globomantics-logo-darkblue.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\globomantics-logo-darkblue.png"
+    }
+  ]
+}

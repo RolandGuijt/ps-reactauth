@@ -2,7 +2,9 @@ import useGetRequest from "./useGetRequest";
 import { useCallback, useEffect, useState } from "react";
 
 const useUser = () => {
-  const { get, loadingState } = useGetRequest("/account/getUserClaims");
+  const { get, loadingState } = useGetRequest(
+    "/account/getUserClaims?slide=false"
+  );
   const [claims, setClaims] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
