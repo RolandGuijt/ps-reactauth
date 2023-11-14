@@ -1,6 +1,7 @@
 using Globomantics.Api.Models;
 using Globomantics.Api.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,13 +9,19 @@ builder.Services.AddSingleton<HouseRepository>();
 builder.Services.AddSingleton<BidRepository>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(o => o.Authority = "https://localhost:5001");
+    .AddJwtBearer(o => 
+    { 
+        o.Authority = "https://localhost:5001"; 
+        o.Audience = "globomantics"; 
+    });
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
 app.UseAuthentication();
+app.UseAuthorization();
 
-app.MapGet("/houses", (HouseRepository repo) => repo.GetAll());
+app.MapGet("/houses", [Authorize](HouseRepository repo) => repo.GetAll());
 app.MapPost("/houses", (House house, HouseRepository repo) =>
 {
     repo.Add(house);

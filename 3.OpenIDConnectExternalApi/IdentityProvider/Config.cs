@@ -14,7 +14,16 @@ public static class Config
     public static IEnumerable<ApiScope> ApiScopes =>
         new ApiScope[]
         {
-            new ApiScope("globoapi")
+            new ApiScope("globoapi"),
+        };
+
+    public static IEnumerable<ApiResource> ApiResources =>
+        new ApiResource[]
+        {
+            new ApiResource("globomantics", "Globomantics APIs")
+            {
+                Scopes = {"globoapi"}
+            }
         };
 
     public static IEnumerable<Client> Clients =>
@@ -34,7 +43,8 @@ public static class Config
                 PostLogoutRedirectUris = { "https://localhost:7180/signout-callback-oidc" },
 
                 AlwaysIncludeUserClaimsInIdToken = true,
-                AllowedScopes = { "openid", "profile" }
+                AllowedScopes = { "openid", "profile", "globoapi" },
+                RequireConsent = true,
             },
         };
 }
