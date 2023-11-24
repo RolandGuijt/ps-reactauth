@@ -11,12 +11,6 @@ public static class Config
             new IdentityResources.Profile(),
         };
 
-    public static IEnumerable<ApiScope> ApiScopes =>
-        new ApiScope[]
-        {
-            new ApiScope("globoapi")
-        };
-
     public static IEnumerable<Client> Clients =>
         new Client[]
         {

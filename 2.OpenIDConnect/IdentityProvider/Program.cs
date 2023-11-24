@@ -5,18 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
-var isBuilder = builder.Services.AddIdentityServer(options =>
-    {
-        options.Events.RaiseErrorEvents = true;
-        options.Events.RaiseInformationEvents = true;
-        options.Events.RaiseFailureEvents = true;
-        options.Events.RaiseSuccessEvents = true;
-    })
+var isBuilder = builder.Services.AddIdentityServer()
     .AddTestUsers(TestUsers.Users);
 
 // in-memory, code config
 isBuilder.AddInMemoryIdentityResources(Config.IdentityResources);
-isBuilder.AddInMemoryApiScopes(Config.ApiScopes);
 isBuilder.AddInMemoryClients(Config.Clients);
 
 var app = builder.Build();
