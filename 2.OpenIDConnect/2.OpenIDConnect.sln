@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Backend", "backend\Globomantics.Backend.csproj", "{29873A8C-FB65-4B89-8252-911762359777}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globomantics.Idp", "IdentityProvider\Globomantics.Idp.csproj", "{2CB68633-51B2-45E4-8C9B-768BA441841C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29873A8C-FB65-4B89-8252-911762359777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29873A8C-FB65-4B89-8252-911762359777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29873A8C-FB65-4B89-8252-911762359777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29873A8C-FB65-4B89-8252-911762359777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB68633-51B2-45E4-8C9B-768BA441841C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB68633-51B2-45E4-8C9B-768BA441841C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB68633-51B2-45E4-8C9B-768BA441841C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB68633-51B2-45E4-8C9B-768BA441841C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E31425EE-207D-4DE6-82B1-CC864A22C02B}
+	EndGlobalSection
+EndGlobal

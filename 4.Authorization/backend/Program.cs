@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Globomantics.Backend.Models;
 using Globomantics.Backend.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -38,6 +39,14 @@ app.MapPost("houses/{id:int}/bids", [Authorize] (Bid bid, BidRepository repo) =>
 {
     repo.Add(bid);
     return Results.Created($"/houses/{bid.HouseId}/bids", bid);
+});
+
+app.MapGet("/user/settings", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
+{
+    var sub = user.FindFirstValue("sub");
+    if (sub is null)
+        return [];
+    return repo.GetSettings(sub);
 });
 
 app.MapControllers();
