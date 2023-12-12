@@ -3,14 +3,12 @@ import currencyFormatter from "../helpers/currencyFormatter";
 import loadingStatus from "../helpers/loadingStatus";
 import useBids from "../hooks/useBids";
 import LoadingIndicator from "./loadingIndicator";
-import AccessDenied from "./accessDenied";
 import useAuthzData from "../hooks/useAuthzData";
-import useUser from "../hooks/useUser";
+import AccessDenied from "./accessDenied";
 
 const Bids = ({ house }) => {
-  const { getIsAdmin } = useUser();
   const { bids, loadingState, addBid } = useBids(house.id);
-  const { getBidsEnabled, authzLoadingState } = useAuthzData();
+  const { getBidsEnabled, loadingState: authzLoadingState } = useAuthzData();
 
   const emptyBid = {
     houseId: house.id,
@@ -22,11 +20,11 @@ const Bids = ({ house }) => {
 
   if (
     loadingState !== loadingStatus.loaded ||
-    authzLoadingState !== loadingState.loaded
+    authzLoadingState !== loadingStatus.loaded
   )
     return <LoadingIndicator loadingState={loadingState} />;
 
-  if (!getIsAdmin() || !getBidsEnabled()) return <AccessDenied />;
+  if (!getBidsEnabled()) return <AccessDenied />;
 
   const onBidSubmitClick = () => {
     addBid(newBid);
@@ -55,37 +53,35 @@ const Bids = ({ house }) => {
           </table>
         </div>
       </div>
-      {getIsAdmin() && (
-        <div className="row">
-          <div className="col-4">
-            <input
-              id="bidder"
-              className="h-100"
-              type="text"
-              value={newBid.bidder}
-              onChange={(e) => setNewBid({ ...newBid, bidder: e.target.value })}
-              placeholder="Bidder"
-            ></input>
-          </div>
-          <div className="col-4">
-            <input
-              id="amount"
-              className="h-100"
-              type="number"
-              value={newBid.amount}
-              onChange={(e) =>
-                setNewBid({ ...newBid, amount: parseInt(e.target.value) })
-              }
-              placeholder="Amount"
-            ></input>
-          </div>
-          <div className="col-2">
-            <button className="btn btn-primary" onClick={onBidSubmitClick}>
-              Add
-            </button>
-          </div>
+      <div className="row">
+        <div className="col-4">
+          <input
+            id="bidder"
+            className="h-100"
+            type="text"
+            value={newBid.bidder}
+            onChange={(e) => setNewBid({ ...newBid, bidder: e.target.value })}
+            placeholder="Bidder"
+          ></input>
         </div>
-      )}
+        <div className="col-4">
+          <input
+            id="amount"
+            className="h-100"
+            type="number"
+            value={newBid.amount}
+            onChange={(e) =>
+              setNewBid({ ...newBid, amount: parseInt(e.target.value) })
+            }
+            placeholder="Amount"
+          ></input>
+        </div>
+        <div className="col-2">
+          <button className="btn btn-primary" onClick={onBidSubmitClick}>
+            Add
+          </button>
+        </div>
+      </div>
     </>
   );
 };
