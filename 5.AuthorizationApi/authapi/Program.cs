@@ -16,7 +16,7 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-app.MapGet("/user/settings", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
+app.MapGet("/user/authzdata", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
 {
     var sub = user.FindFirstValue(ClaimTypes.NameIdentifier);
     if (sub is null)

@@ -41,7 +41,7 @@ app.MapPost("houses/{id:int}/bids", [Authorize] (Bid bid, BidRepository repo) =>
     return Results.Created($"/houses/{bid.HouseId}/bids", bid);
 });
 
-app.MapGet("/user/settings", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
+app.MapGet("/user/authzdata", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
 {
     var sub = user.FindFirstValue("sub");
     if (sub is null)

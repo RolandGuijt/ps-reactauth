@@ -3,7 +3,7 @@ import useGetRequest from "./useGetRequest";
 
 const useAuthzData = () => {
   const [authzData, setAuthzData] = useState([]);
-  const { get, loadingState } = useGetRequest("/auth/user/settings");
+  const { get, loadingState } = useGetRequest("/auth/user/authzdata");
 
   useEffect(() => {
     const getAuthzData = async () => {
