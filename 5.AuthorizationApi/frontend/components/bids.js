@@ -3,12 +3,12 @@ import currencyFormatter from "../helpers/currencyFormatter";
 import loadingStatus from "../helpers/loadingStatus";
 import useBids from "../hooks/useBids";
 import LoadingIndicator from "./loadingIndicator";
-import useAuthzData from "../hooks/useAuthzData";
 import AccessDenied from "./accessDenied";
+import useAuthzRules from "../hooks/useAuthzRules";
 
 const Bids = ({ house }) => {
   const { bids, loadingState, addBid } = useBids(house.id);
-  const { getBidsEnabled, loadingState: authzLoadingState } = useAuthzData();
+  const { canDisplayBids } = useAuthzRules();
 
   const emptyBid = {
     houseId: house.id,
@@ -18,13 +18,10 @@ const Bids = ({ house }) => {
 
   const [newBid, setNewBid] = useState(emptyBid);
 
-  if (
-    loadingState !== loadingStatus.loaded ||
-    authzLoadingState !== loadingStatus.loaded
-  )
+  if (loadingState !== loadingStatus.loaded)
     return <LoadingIndicator loadingState={loadingState} />;
 
-  if (!getBidsEnabled()) return <AccessDenied />;
+  if (!canDisplayBids()) return <AccessDenied />;
 
   const onBidSubmitClick = () => {
     addBid(newBid);

@@ -27,7 +27,7 @@ public class UserRepository
         return user;
     }
 
-    public Dictionary<string, string> GetSettings(string userId)
+    public Dictionary<string, string> GetAuthzData(string userId)
     {
         return userAuthZs
             .Where(us => us.UserId == userId)

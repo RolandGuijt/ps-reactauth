@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useGetRequest from "./useGetRequest";
 
 const useAuthzData = () => {
@@ -13,13 +13,9 @@ const useAuthzData = () => {
     getAuthzData();
   }, [get]);
 
-  const getBidsEnabled = useCallback(() => {
-    return authzData.displayBids === "true";
-  });
-
   return {
     loadingState,
-    getBidsEnabled,
+    authzData,
   };
 };
 

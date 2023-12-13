@@ -33,9 +33,11 @@ builder.Services.AddAuthentication(o =>
         //Store in application secrets
         options.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
         options.ResponseType = "code";
+        options.Scope.Add("role");
         options.Scope.Add("globoapi");
         options.Scope.Add("authapi");
         options.SaveTokens = true;
+        options.MapInboundClaims = false;
     });
 
 var app = builder.Build();

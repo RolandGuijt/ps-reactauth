@@ -32,17 +32,11 @@ const useUser = () => {
     [claims]
   );
 
-  const getIsAdmin = useCallback(() => {
-    let claim = claims?.find((claim) => claim.type === "role");
-    return claim ? claim.value : false;
-  });
-
   return {
     claims,
     loadingState,
     isAuthenticated,
     getNameClaim,
-    getIsAdmin,
     login,
     logout,
   };

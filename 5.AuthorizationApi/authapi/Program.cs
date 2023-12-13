@@ -10,7 +10,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(o => 
     { 
         o.Authority = "https://localhost:5001"; 
-        o.Audience = "globoauthapi"; 
+        o.Audience = "globoauthapi";
+        o.MapInboundClaims = false;
     });
 builder.Services.AddAuthorization();
 
@@ -18,7 +19,7 @@ var app = builder.Build();
 
 app.MapGet("/user/authzdata", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
 {
-    var sub = user.FindFirstValue(ClaimTypes.NameIdentifier);
+    var sub = user.FindFirstValue("sub");
     if (sub is null)
         return [];
     return repo.GetSettings(sub);

@@ -4,13 +4,11 @@ import loadingStatus from "../helpers/loadingStatus";
 import useBids from "../hooks/useBids";
 import LoadingIndicator from "./loadingIndicator";
 import AccessDenied from "./accessDenied";
-import useAuthzData from "../hooks/useAuthzData";
-import useUser from "../hooks/useUser";
+import useAuthzRules from "../hooks/useAuthzRules";
 
 const Bids = ({ house }) => {
-  const { getIsAdmin } = useUser();
+  const { canEnterNewBid, canDisplayBids } = useAuthzRules();
   const { bids, loadingState, addBid } = useBids(house.id);
-  const { getBidsEnabled, authzLoadingState } = useAuthzData();
 
   const emptyBid = {
     houseId: house.id,
@@ -20,13 +18,10 @@ const Bids = ({ house }) => {
 
   const [newBid, setNewBid] = useState(emptyBid);
 
-  if (
-    loadingState !== loadingStatus.loaded ||
-    authzLoadingState !== loadingState.loaded
-  )
+  if (loadingState !== loadingStatus.loaded)
     return <LoadingIndicator loadingState={loadingState} />;
 
-  if (!getIsAdmin() || !getBidsEnabled()) return <AccessDenied />;
+  if (!canDisplayBids()) return <AccessDenied />;
 
   const onBidSubmitClick = () => {
     addBid(newBid);
@@ -55,7 +50,7 @@ const Bids = ({ house }) => {
           </table>
         </div>
       </div>
-      {getIsAdmin() && (
+      {canEnterNewBid() && (
         <div className="row">
           <div className="col-4">
             <input

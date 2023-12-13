@@ -46,7 +46,7 @@ app.MapGet("/user/authzdata", [Authorize] (UserRepository repo, ClaimsPrincipal 
     var sub = user.FindFirstValue("sub");
     if (sub is null)
         return [];
-    return repo.GetSettings(sub);
+    return repo.GetAuthzData(sub);
 });
 
 app.MapControllers();
