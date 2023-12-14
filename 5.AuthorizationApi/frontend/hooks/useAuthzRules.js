@@ -12,10 +12,12 @@ const useAuthzRules = () => {
   });
 
   const canDisplayBids = useCallback(() => {
-    console.log(claims);
     let claim = claims?.find((claim) => claim.type === "role");
     let isAdmin = claim ? claim.value === "Admin" : false;
-    return isAdmin && authzData.displayBids === "true";
+    let displayBids = authzData?.find((d) => d.type === "displayBids");
+    let canDisplayBids = displayBids ? displayBids.value === "true" : false;
+
+    return isAdmin && canDisplayBids;
   });
 
   return {

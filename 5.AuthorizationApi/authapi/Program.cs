@@ -17,12 +17,12 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-app.MapGet("/user/authzdata", [Authorize] (UserRepository repo, ClaimsPrincipal user) =>
+app.MapGet("/user/authzdata/{applicationId}", [Authorize] (UserRepository repo, ClaimsPrincipal user, int applicationId) =>
 {
     var sub = user.FindFirstValue("sub");
     if (sub is null)
         return [];
-    return repo.GetSettings(sub);
+    return repo.GetAuthzData(applicationId, sub);
 });
 
 app.UseAuthentication();

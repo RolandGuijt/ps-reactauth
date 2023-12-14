@@ -4,14 +4,13 @@ public class UserRepository
 {
     private List<UserAuthZ> userAuthZs =
     [
-        new UserAuthZ { UserId = "1", SettingType = "displayBids", SettingValue = "true" },
-        new UserAuthZ { UserId = "2", SettingType = "displayBids", SettingValue = "false" }
+        new UserAuthZ { ApplicationId = 1, UserId = "1", Type = "displayBids", Value = "true" },
+        new UserAuthZ { ApplicationId = 1, UserId = "2", Type = "displayBids", Value = "false" }
     ];
 
-    public Dictionary<string, string> GetSettings(string userId)
+    public IEnumerable<UserAuthZ> GetAuthzData(int applicationId, string userId)
     {
         return userAuthZs
-            .Where(us => us.UserId == userId)
-            .ToDictionary(us => us.SettingType, us => us.SettingValue);
+            .Where(us => us.UserId == userId && us.ApplicationId == applicationId);
     }
 }
