@@ -9,7 +9,7 @@ public static class Config
         {
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
-            new IdentityResource("role", ["role"])
+            new IdentityResource("roles", ["role"])
         };
 
     public static IEnumerable<ApiScope> ApiScopes =>
@@ -49,7 +49,7 @@ public static class Config
                 PostLogoutRedirectUris = { "https://localhost:7180/signout-callback-oidc" },
 
                 AlwaysIncludeUserClaimsInIdToken = true,
-                AllowedScopes = { "openid", "profile", "role", "globoapi", "authapi" },
+                AllowedScopes = { "openid", "profile", "roles", "globoapi", "authapi" },
                 RequireConsent = true,
             },
         };

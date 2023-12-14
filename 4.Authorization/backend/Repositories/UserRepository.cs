@@ -12,7 +12,7 @@ public class UserRepository
 
     private List<UserAuthZ> userAuthZs =
     [
-        new UserAuthZ { UserId = "3522", SettingType = "displayBids", SettingValue = "true" }
+        new UserAuthZ { UserId = "3522", Type = "displayBids", Value = "true" }
     ];
 
     public UserModel? GetByUsernameAndPassword(string username, string password)
@@ -27,10 +27,9 @@ public class UserRepository
         return user;
     }
 
-    public Dictionary<string, string> GetAuthzData(string userId)
+    public IEnumerable<UserAuthZ> GetAuthzData(string userId)
     {
         return userAuthZs
-            .Where(us => us.UserId == userId)
-            .ToDictionary(us => us.SettingType, us => us.SettingValue);
+            .Where(us => us.UserId == userId);
     }
 }
