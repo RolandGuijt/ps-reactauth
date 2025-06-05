@@ -7,6 +7,7 @@ const usePostHouse = () => {
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
+            "x-csrf": "1",
           },
           body: JSON.stringify(house),
         });
